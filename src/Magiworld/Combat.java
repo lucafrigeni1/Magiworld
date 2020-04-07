@@ -1,4 +1,4 @@
 package Magiworld;
 
-public class Menu {
+public class Combat {
 }
