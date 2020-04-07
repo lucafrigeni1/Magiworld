@@ -1,63 +1,35 @@
-package Magiworld;
+package Magiworld.Heros;
 
-abstract class Heros {
+public abstract class Heros {
 
-    double level = 0;
-    double health = level*5;
-    double strength = 0;
-    double agility = 0;
-    double intelligence = 0;
-    int player = 0;
+    int niveau, vie, nJoueur;
 
-    abstract void basicAttack(Heros ennemy);
-    abstract void specialAttack ();
-
-    public void printHealth(){
-        System.out.println("you got " + health);
-
+    public Heros(int niveau, int nJoueur){
+        this.niveau = niveau;
+        this.vie = niveau*5;
+        this.nJoueur = nJoueur;
     }
 
-    public double getLevel() {
-         return level;
-    }
-    public double getHealth() {
-        return health;
-    }
-    public double getStrength() {
-        return strength;
-    }
-    public double getAgility() {
-        return agility;
-    }
-    public double getIntelligence() {
-        return intelligence;
-    }
-    public int getPlayer() {
-        return player;
-    }
-    public int getAttack() {
-        return attack;
-    }
+    public abstract void aBasique(Heros ennemi);
+    public abstract void aSpécial(Heros ennemi);
+    public abstract void présenteToi();
 
-    public void setLevel(double level) {
-        this.level = level;
-    }
-    public void setHealth(double health) {
-        this.health = health;
-    }
-    public void setStrength(double strength) {
-        this.strength = strength;
-    }
-    public void setAgility(double agility) {
-        this.agility = agility;
-    }
-    public void setIntelligence(double intelligence) {
-        this.intelligence = intelligence;
-    }
-    public void setPlayer(int player) {
-        this.player = player;
-    }
-    public void setAttack(int attack) {
-        this.attack = attack;
+    //GET
+    public int getNiveau() {return niveau;}
+    public int getVie() {return vie;}
+    public int getnJoueur() {return nJoueur;}
+
+    //SET
+    public void setNiveau(int niveau) {this.niveau = niveau;}
+    public void setVie(int vie) {this.vie = vie;}
+    public void setnJoueur(int nJoueur) {this.nJoueur = nJoueur;}
+
+    public void viePerdu(int dégats){
+        int vieActuelle = getVie();
+        System.out.println("Joueur " + getnJoueur() + " perd " + dégats + " points de vie");
+        setVie(vieActuelle - dégats);
+        if(getVie() <= 0){
+            System.out.println("Joueur " + getnJoueur() + " est mort");
+        }
     }
 }
