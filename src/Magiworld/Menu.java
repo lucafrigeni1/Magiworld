@@ -20,6 +20,7 @@ public class Menu {
        System.out.println();
        joueur2 = création (2);
        joueur2.présenteToi();
+       System.out.println();
     }
 
     public Heros création(int nJoueur){

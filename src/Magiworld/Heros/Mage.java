@@ -14,7 +14,7 @@ public class Mage extends Heros {
     @Override
     public void aBasique(Heros ennemi){
         int dégats = getIntelligence();
-        System.out.println("J" +getnJoueur() + "lance une boule de feu et inflige: " + dégats + "dommages.");
+        System.out.println("J" +getnJoueur() + " lance une boule de feu et inflige: " + dégats + "dommages.");
         ennemi.viePerdu(dégats);
     }
 

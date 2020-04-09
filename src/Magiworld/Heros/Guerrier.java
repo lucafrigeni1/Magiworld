@@ -12,7 +12,7 @@ public class Guerrier extends Heros {
     @Override
     public void aBasique(Heros ennemi){
         int dégats = getForce();
-        System.out.println("J" + getnJoueur() + "frappe avec son épée et inflige: " + dégats + " dégats");
+        System.out.println("J" + getnJoueur() + " frappe avec son épée et inflige: " + dégats + " dégats");
         ennemi.viePerdu(dégats);
     }
 
@@ -20,7 +20,7 @@ public class Guerrier extends Heros {
     public void aSpécial(Heros ennemi){
         int dégats = getForce()*2;
         int sacrifice = getForce()/2;
-        System.out.println("J" + getnJoueur() + "utilise RAGE: il inflige " + dégats + " dégats et perd " + sacrifice + " points de vie");
+        System.out.println("J" + getnJoueur() + " utilise RAGE: il inflige " + dégats + " dégats et perd " + sacrifice + " points de vie");
         ennemi.viePerdu(dégats);
         viePerdu(sacrifice);
     }

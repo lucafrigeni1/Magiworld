@@ -12,7 +12,7 @@ public class Rodeur extends Heros {
     @Override
     public void aBasique(Heros ennemi){
         int dégats = getAgilité();
-        System.out.println("J" + getnJoueur() + "Tire une flèche et inflige : " + dégats + "dommages.");
+        System.out.println("J" + getnJoueur() + " Tire une flèche et inflige : " + dégats + "dommages.");
         ennemi.viePerdu(dégats);
     }
 
