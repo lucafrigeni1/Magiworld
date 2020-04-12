@@ -21,8 +21,9 @@ public class Combat {
 
                 try {
                     attaque = sc.nextInt();
-                }catch (InputMismatchException c){}
-                sc.nextLine();
+                }catch (InputMismatchException c){
+                    sc.nextLine();
+                }
 
                 if (attaque != 1 && attaque != 2)
                     System.out.println("saisissez 1 ou 2");
@@ -54,8 +55,10 @@ public class Combat {
 
             try {
                 attaque = sc.nextInt();
-            }catch (InputMismatchException b){}
-            sc.nextLine();
+            }catch (InputMismatchException b){
+                sc.nextLine();
+            }
+
 
             if (attaque != 1 && attaque != 2)
                 System.out.println("saisissez 1 ou 2");
