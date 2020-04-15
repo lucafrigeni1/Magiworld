@@ -5,4 +5,3 @@ public class Main {
         Game.start();
     }
 }
-1
